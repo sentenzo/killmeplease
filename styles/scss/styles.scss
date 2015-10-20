@@ -5,7 +5,7 @@
 ////////////
 //
     $rgbBlackText: #000;
-    $rgbWhiteText: #fff;
+    $rgbWhiteText: #999;
     
     $rgbColorLight: #F94600;
     $rgbColorDark: #000;
@@ -16,7 +16,7 @@
 // widths:
 ////////////
 //
-    $contentWidth: 500px;
+    $contentWidth: 480px;
     $leftColWIdth: 0px;
     $rightColWidth: $contentWidth - $leftColWIdth;
 //
@@ -112,12 +112,15 @@ body {
             width: $rightColWidth;
             float: right;
             ul.wishList {
+                
                 display: block;
+                
+                a {
+                    color: #fff;//#cd0;
+                }
                 li {
                     display: block;
                     list-style: none;
-                    //height: $wishHeight;
-                    //@include dbg;
                     margin: 4px 0;
                     padding-left: 4px;
                     border-left: 2px solid $rgbColorLight;

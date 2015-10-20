@@ -19,20 +19,23 @@ body {
     width: 100%;
     position: relative; }
     body #header .container h1 {
-      text-align: right; }
+      text-align: right;
+      margin: 0 8px; }
   body .header {
     height: 100px; }
   body #container {
     min-height: 100%;
-    margin-bottom: -50px;
+    margin-bottom: -70px;
     margin-top: -100px;
-    margin: -100px auto -50px auto; }
+    margin: -100px auto -70px auto; }
     body #container #left_col {
       float: left;
       width: 0px; }
     body #container #right_col {
-      width: 480px;
       float: right; }
+      body #container #right_col h2 {
+        margin: 0 8px;
+        padding: 8px 0; }
       body #container #right_col ul.wishList {
         display: block; }
         body #container #right_col ul.wishList a {
@@ -83,15 +86,22 @@ body {
     body #container .buffer {
       clear: both; }
   body .container {
-    width: 480px;
+    min-width: 450px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto; }
   body #footer {
     background-color: #F94600;
     color: #000;
-    width: 100%;
-    text-align: right; }
+    width: 100%; }
+    body #footer h2 {
+      text-align: right;
+      margin: 0 8px;
+      padding: 8px 0; }
+    body #footer .datetime {
+      text-align: right;
+      margin: 0 8px; }
   body .footer {
-    height: 50px; }
+    height: 70px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -16,9 +16,11 @@
 // widths:
 ////////////
 //
-    $contentWidth: 480px;
+    $contentWidthMin: 450px;
+    $contentWidthMax: 600px;
+
     $leftColWIdth: 0px;
-    $rightColWidth: $contentWidth - $leftColWIdth;
+    //$rightColWidth: $contentWidth - $leftColWIdth;
 //
 ////////////
 
@@ -27,7 +29,7 @@
 ////////////
 //
     $headerHeight: 100px;
-    $footerHeight: 50px;
+    $footerHeight: 70px;
     $wishHeight: 80px;
 //
 ////////////
@@ -89,6 +91,7 @@ body {
         .container {
             h1 {
                 text-align: right;
+                margin: 0 8px;
             }
         }
     }
@@ -109,8 +112,12 @@ body {
             //@include dbg;
         };
         #right_col  {
-            width: $rightColWidth;
+            //width: $rightColWidth;
             float: right;
+            h2 {
+                margin: 0 8px;
+                padding: 8px 0;
+            }
             ul.wishList {
                 
                 display: block;
@@ -148,13 +155,23 @@ body {
         }
     }
     .container {
-        width: $contentWidth;
+        min-width: $contentWidthMin;
+        max-width: $contentWidthMax;
+        //width: $contentWidth;
         @include horCentered;
     }
     #footer {
         @include lightBlock;
         width: 100%;
-        text-align: right;
+        h2 {
+            text-align: right;
+            margin: 0 8px;
+            padding: 8px 0;
+        }
+        .datetime {
+            text-align: right;
+            margin: 0 8px;
+        }
     }
     .footer {
         height: $footerHeight;

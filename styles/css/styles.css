@@ -1,0 +1,56 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia"; }
+
+h1, h2, h3, h4, h5, h6, p,
+ol, ul, li {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #000;
+  color: #ccc; }
+  body #header {
+    background-color: #F94600;
+    color: #111;
+    width: 100%;
+    position: relative; }
+    body #header .container h1 {
+      text-align: center; }
+  body .header {
+    height: 100px; }
+  body #container {
+    min-height: 100%;
+    margin-bottom: -50px;
+    margin-top: -100px;
+    margin: -100px auto -50px auto; }
+    body #container #left_col {
+      float: left;
+      width: 0px; }
+    body #container #right_col {
+      width: 500px;
+      float: right; }
+      body #container #right_col ul.wishList {
+        display: block; }
+        body #container #right_col ul.wishList li {
+          display: block;
+          list-style: none;
+          height: 80px;
+          border-radius: 10px; }
+    body #container .buffer {
+      clear: both; }
+  body .container {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto; }
+  body #footer {
+    background-color: #F94600;
+    color: #111;
+    width: 100%; }
+  body .footer {
+    height: 50px; }
+
+/*# sourceMappingURL=styles.css.map */

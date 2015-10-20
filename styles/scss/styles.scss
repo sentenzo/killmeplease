@@ -1,68 +1,127 @@
-html,
+////////////
+// colors:
+////////////
+//
+    $rgbBlackText: #111;
+    $rgbWhiteText: #ccc;
+    
+    $rgbColorLight: #F94600;
+    $rgbColorDark: #000;
+//
+////////////
+
+////////////
+// widths:
+////////////
+//
+    $contentWidth: 500px;
+    $leftColWIdth: 0px;
+    $rightColWidth: $contentWidth - $leftColWIdth;
+//
+////////////
+
+////////////
+// heights:
+////////////
+//
+    $headerHeight: 100px;
+    $footerHeight: 50px;
+    $wishHeight: 80px;
+//
+////////////
+
+@mixin dbg {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@mixin blockColor($bgColor, $textColor) {
+    background-color: $bgColor;
+    color: $textColor;
+}
+@mixin lightBlock {
+    @include blockColor($rgbColorLight, $rgbBlackText);
+}
+@mixin darkBlock {
+    @include blockColor($rgbColorDark, $rgbWhiteText);
+}
+
+@mixin horCentered {
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+
+
+html, 
 body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: "Georgia"
 }
-
-
-/*
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p, 
-*/
-]
-
-ol,
-ul,
-li {
+h1,h2,h3,h4,h5,h6,p,
+ol,ul,li {
     padding: 0;
     margin: 0;
-    
+}
+body {
+    @include darkBlock;
+    #header {
+        @include lightBlock;
+        width: 100%;
+        position: relative;
+        .container {
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+    .header {
+        height: $headerHeight;
+    }
+    #container {
+        min-height: 100%;
+        margin-bottom: -$footerHeight;
+        margin-top: -$headerHeight;
+        
+        //@include dbg;
+
+        margin: (-$headerHeight) auto (-$footerHeight) auto;
+        #left_col {
+            float: left;
+            width: $leftColWIdth;
+            //@include dbg;
+        };
+        #right_col  {
+            width: $rightColWidth;
+            float: right;
+            ul.wishList {
+                display: block;
+                li {
+                    display: block;
+                    list-style: none;
+                    height: $wishHeight;
+                    //@include dbg;
+                    border-radius: 10px;
+                }
+            }
+        };
+        .buffer {
+            clear: both;
+        }
+    }
+    .container {
+        width: $contentWidth;
+        @include horCentered;
+    }
+    #footer {
+        @include lightBlock;
+        width: 100%;
+    }
+    .footer {
+        height: $footerHeight;
+    }
 }
 
-#header {
-    background-color: #cff;
-    width: 100%;
-    position: relative;
-}
 
-.header {
-    height: 80px;
-}
 
-#container {
-    background-color: #eee;
-    width: 800px;
-    min-height: 100%;
-    margin: -80px auto -50px auto;
-}
-
-#left_col {
-    background-color: #ddf;
-    float: left;
-    width: 200px;
-}
-
-#right_col {
-    background-color: #fdd;
-    width: 600px;
-    float: right;
-}
-
-.buffer {
-    clear: both;
-}
-
-.footer {
-    height: 50px;
-}
-
-#footer {
-    background-color: #ffc;
-    width: 100%;
-}

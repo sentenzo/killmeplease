@@ -1,9 +1,11 @@
+// sass styles/scss/styles.scss styles/css/styles.css
+
 ////////////
 // colors:
 ////////////
 //
-    $rgbBlackText: #111;
-    $rgbWhiteText: #ccc;
+    $rgbBlackText: #000;
+    $rgbWhiteText: #fff;
     
     $rgbColorLight: #F94600;
     $rgbColorDark: #000;
@@ -31,7 +33,7 @@
 ////////////
 
 @mixin dbg {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 @mixin blockColor($bgColor, $textColor) {
@@ -50,6 +52,20 @@
     margin-right: auto;
 } 
 
+@mixin spanTag($name, $color) {
+    span.#{$name} {
+        padding: 0 5px;
+        border-radius: 0 10px 10px 0;
+        
+        margin: 0 5px;
+        //font-weight: bold;
+        color: $rgbBlackText;
+        background-color: $color;
+        &:after {
+            content: "#{$name}"; 
+        }
+    }
+}
 
 
 html, 
@@ -72,7 +88,7 @@ body {
         position: relative;
         .container {
             h1 {
-                text-align: center;
+                text-align: right;
             }
         }
     }
@@ -100,10 +116,28 @@ body {
                 li {
                     display: block;
                     list-style: none;
-                    height: $wishHeight;
+                    //height: $wishHeight;
                     //@include dbg;
-                    border-radius: 10px;
+                    margin: 4px 0;
+                    padding-left: 4px;
+                    border-left: 2px solid $rgbColorLight;
+                    tr {
+                        td:nth-child(1) {
+                            text-align: right;
+                            vertical-align: top;
+                        }
+                        p {
+                            padding: 0 5px;
+                        }
+                        
+                        @include spanTag("impossible", #FF00CF);
+                        @include spanTag("hard", rgb(243, 34, 0));
+                        @include spanTag("medium", rgb(255, 174, 8));
+                        @include spanTag("easy", #BFF60B);
+                    }
+
                 }
+
             }
         };
         .buffer {
@@ -117,6 +151,7 @@ body {
     #footer {
         @include lightBlock;
         width: 100%;
+        text-align: right;
     }
     .footer {
         height: $footerHeight;

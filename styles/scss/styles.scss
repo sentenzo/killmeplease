@@ -139,8 +139,6 @@ body {
             //@include dbg;
         };
         #right_col  {
-            //width: $rightColWidth;
-            //float: right;
             h2 {
                 margin: 0 8px;
                 padding: 6px 0 0 0;
@@ -148,12 +146,8 @@ body {
             }
             .tab {
                 display: inline-block;
-                //border-left: 1px solid gray;
-                //border-bottom: 1px solid gray;
-                //border-right: 1px solid gray;
-                border-radius: 0 0 10px 10px;
+                //border-radius: 0 0 10px 10px;
                 padding: 0 10px;
-                //background-color: $rgbColorLight;
                 color: $rgbBlackText;
                 @include bgGradientVertical($rgbColorLight,#7e2300);
                 &:hover {
@@ -173,9 +167,6 @@ body {
                 }
             }
             ul.wishList {
-                
-                //display: block;
-                
                 a {
                     color: #fff;//#cd0;
                 }
@@ -193,15 +184,12 @@ body {
                         p {
                             padding: 0 5px;
                         }
-                        
                         @include spanTag("impossible", #FF00CF);
                         @include spanTag("hard", rgb(243, 34, 0));
                         @include spanTag("medium", rgb(255, 174, 8));
                         @include spanTag("easy", #BFF60B);
                     }
-
                 }
-
             }
         };
         .buffer {
@@ -211,7 +199,6 @@ body {
     .container {
         min-width: $contentWidthMin;
         max-width: $contentWidthMax;
-        //width: $contentWidth;
         @include horCentered;
     }
     #footer {

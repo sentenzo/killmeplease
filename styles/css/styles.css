@@ -129,10 +129,34 @@ body {
         background-color: #BFF60B; }
         body #container #right_col ul.wishList li tr span.easy:after {
           content: "easy"; }
+    body #container #right_col .guestList {
+      margin: 40px 0 0 0; }
+      body #container #right_col .guestList .guestRow {
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        text-align: justify;
+        height: 175px; }
+        body #container #right_col .guestList .guestRow:after {
+          width: 100%;
+          height: 0px;
+          visibility: hidden;
+          overflow: hidden;
+          content: "";
+          display: inline-block; }
+        body #container #right_col .guestList .guestRow .guestBox {
+          background: #E76D13 none repeat scroll 0% 0%;
+          width: 100px;
+          height: 120px;
+          display: inline-block;
+          text-align: left;
+          border: 4px solid #F94600;
+          line-height: normal;
+          font-size: 14px;
+          vertical-align: top; }
     body #container .buffer {
       clear: both; }
   body .container {
-    min-width: 430px;
+    min-width: 445px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto; }

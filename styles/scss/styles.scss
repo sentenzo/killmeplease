@@ -19,7 +19,7 @@
 // widths:
 ////////////
 //
-    $contentWidthMin: 430px;
+    $contentWidthMin: 445px;
     $contentWidthMax: 600px;
 
     $leftColWIdth: 0px;
@@ -188,6 +188,34 @@ body {
                         @include spanTag("hard", rgb(243, 34, 0));
                         @include spanTag("medium", rgb(255, 174, 8));
                         @include spanTag("easy", #BFF60B);
+                    }
+                }
+            }
+            .guestList {
+                margin: 50px 0 0 0;
+                .guestRow {
+                    margin: 0px 0px 0px 0px;
+                    padding: 0px;
+                    text-align: justify;
+                    height: 175px;
+                    &:after{
+                        width: 100%;
+                        height: 0px;
+                        visibility: hidden;
+                        overflow: hidden;
+                        content: "";
+                        display: inline-block;
+                    }
+                    .guestBox {
+                        background: #E76D13 none repeat scroll 0% 0%;
+                        width: 100px;
+                        height: 120px;
+                        display: inline-block;
+                        text-align: left;
+                        border: 4px solid $rgbColorLight;
+                        line-height: normal;
+                        font-size: 14px;
+                        vertical-align: top;
                     }
                 }
             }

@@ -89,7 +89,7 @@ body {
     body #container .buffer {
       clear: both; }
   body .container {
-    min-width: 450px;
+    min-width: 430px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto; }

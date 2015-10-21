@@ -29,7 +29,7 @@
 ////////////
 //
     $headerHeight: 100px;
-    $footerHeight: 40px;
+    $footerHeight: 32px;
     //$wishHeight: 80px;
 //
 ////////////
@@ -178,13 +178,13 @@ body {
         h2 {
             text-align: right;
             margin: 0 8px;
-            padding: 5px 0;
+            padding: 3px 0;
             @include headerFont;
         }
         p.datetime {
             text-align: right;
             margin: 0 8px;
-            padding: 8px 0;
+            padding: 4px 0;
             float: left;
         }
     }

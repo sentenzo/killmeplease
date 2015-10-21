@@ -38,7 +38,7 @@
 ////////////
 
 @mixin headerFont {
-    font-family: 'Black Ops One', cursive;
+    font-family: 'Black Ops One', sans-serif;
 }
 @mixin paragrathFont {
     font-family: 'Rosario', sans-serif;
@@ -140,7 +140,7 @@ body {
         };
         #right_col  {
             //width: $rightColWidth;
-            float: right;
+            //float: right;
             h2 {
                 margin: 0 8px;
                 padding: 6px 0 0 0;
@@ -174,7 +174,7 @@ body {
             }
             ul.wishList {
                 
-                display: block;
+                //display: block;
                 
                 a {
                     color: #fff;//#cd0;

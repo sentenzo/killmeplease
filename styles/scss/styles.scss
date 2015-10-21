@@ -29,10 +29,19 @@
 ////////////
 //
     $headerHeight: 100px;
-    $footerHeight: 70px;
-    $wishHeight: 80px;
+    $footerHeight: 40px;
+    //$wishHeight: 80px;
 //
 ////////////
+
+@mixin headerFont {
+    font-family: 'Black Ops One', cursive;
+}
+@mixin paragrathFont {
+    font-family: 'Rosario', sans-serif;
+    //font: 0.8em Arial,Helvetica,sans-serif;
+    //font-family: 'Roboto', sans-serif;
+}
 
 @mixin dbg {
     background-color: rgba(255, 255, 255, 0.05);
@@ -75,7 +84,8 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Georgia"
+    @include paragrathFont;
+    font-size: 10pt;
 }
 h1,h2,h3,h4,h5,h6,p,
 ol,ul,li {
@@ -92,6 +102,7 @@ body {
             h1 {
                 text-align: right;
                 margin: 0 8px;
+                @include headerFont;
             }
         }
     }
@@ -116,7 +127,8 @@ body {
             float: right;
             h2 {
                 margin: 0 8px;
-                padding: 8px 0;
+                padding: 6px 0 0 0;
+                @include headerFont;
             }
             ul.wishList {
                 
@@ -166,11 +178,14 @@ body {
         h2 {
             text-align: right;
             margin: 0 8px;
-            padding: 8px 0;
+            padding: 5px 0;
+            @include headerFont;
         }
-        .datetime {
+        p.datetime {
             text-align: right;
             margin: 0 8px;
+            padding: 8px 0;
+            float: left;
         }
     }
     .footer {

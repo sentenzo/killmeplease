@@ -3,7 +3,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Georgia"; }
+  font-family: 'Rosario', sans-serif;
+  font-size: 10pt; }
 
 h1, h2, h3, h4, h5, h6, p,
 ol, ul, li {
@@ -20,14 +21,15 @@ body {
     position: relative; }
     body #header .container h1 {
       text-align: right;
-      margin: 0 8px; }
+      margin: 0 8px;
+      font-family: 'Black Ops One', cursive; }
   body .header {
     height: 100px; }
   body #container {
     min-height: 100%;
-    margin-bottom: -70px;
+    margin-bottom: -40px;
     margin-top: -100px;
-    margin: -100px auto -70px auto; }
+    margin: -100px auto -40px auto; }
     body #container #left_col {
       float: left;
       width: 0px; }
@@ -35,7 +37,8 @@ body {
       float: right; }
       body #container #right_col h2 {
         margin: 0 8px;
-        padding: 8px 0; }
+        padding: 6px 0 0 0;
+        font-family: 'Black Ops One', cursive; }
       body #container #right_col ul.wishList {
         display: block; }
         body #container #right_col ul.wishList a {
@@ -97,11 +100,14 @@ body {
     body #footer h2 {
       text-align: right;
       margin: 0 8px;
-      padding: 8px 0; }
-    body #footer .datetime {
+      padding: 5px 0;
+      font-family: 'Black Ops One', cursive; }
+    body #footer p.datetime {
       text-align: right;
-      margin: 0 8px; }
+      margin: 0 8px;
+      padding: 8px 0;
+      float: left; }
   body .footer {
-    height: 70px; }
+    height: 40px; }
 
 /*# sourceMappingURL=styles.css.map */

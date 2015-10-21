@@ -22,6 +22,7 @@ body {
     body #header .container h1 {
       text-align: right;
       margin: 0 8px;
+      cursor: default;
       font-family: 'Black Ops One', cursive; }
   body .header {
     height: 100px; }
@@ -43,43 +44,49 @@ body {
         display: inline-block;
         border-radius: 0 0 10px 10px;
         padding: 0 10px;
-        background-color: #F94600;
         color: #000;
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa84c+0,ff7b0d+100 */
         background: #7e2300;
         /* Old browsers */
-        background: -moz-linear-gradient(top, #7e2300 0%, #f94600 100%);
+        background: -moz-linear-gradient(top, #7e2300 0%, #F94600 100%);
         /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7e2300), color-stop(100%, #f94600));
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7e2300), color-stop(100%, #F94600));
         /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #7e2300 0%, #f94600 100%);
+        background: -webkit-linear-gradient(top, #7e2300 0%, #F94600 100%);
         /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #7e2300 0%, #f94600 100%);
+        background: -o-linear-gradient(top, #7e2300 0%, #F94600 100%);
         /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, #7e2300 0%, #f94600 100%);
+        background: -ms-linear-gradient(top, #7e2300 0%, #F94600 100%);
         /* IE10+ */
-        background: linear-gradient(to bottom, #7e2300 0%, #f94600 100%);
+        background: linear-gradient(to bottom, #7e2300 0%, #F94600 100%);
         /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7e2300', endColorstr='#f94600',GradientType=0 );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorDown', endColorstr='$colorUp',GradientType=0 );
         /* IE6-9 */ }
+        body #container #right_col .tab:hover {
+          background: none;
+          background-color: #F94600;
+          cursor: pointer; }
         body #container #right_col .tab.active {
-          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f94600+0,ffa84c+100 */
-          background: #f94600;
+          background: #F94600;
           /* Old browsers */
-          background: -moz-linear-gradient(top, #f94600 0%, #ffa84c 100%);
+          background: -moz-linear-gradient(top, #F94600 0%, #f80 100%);
           /* FF3.6+ */
-          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f94600), color-stop(100%, #ffa84c));
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F94600), color-stop(100%, #f80));
           /* Chrome,Safari4+ */
-          background: -webkit-linear-gradient(top, #f94600 0%, #ffa84c 100%);
+          background: -webkit-linear-gradient(top, #F94600 0%, #f80 100%);
           /* Chrome10+,Safari5.1+ */
-          background: -o-linear-gradient(top, #f94600 0%, #ffa84c 100%);
+          background: -o-linear-gradient(top, #F94600 0%, #f80 100%);
           /* Opera 11.10+ */
-          background: -ms-linear-gradient(top, #f94600 0%, #ffa84c 100%);
+          background: -ms-linear-gradient(top, #F94600 0%, #f80 100%);
           /* IE10+ */
-          background: linear-gradient(to bottom, #f94600 0%, #ffa84c 100%);
+          background: linear-gradient(to bottom, #F94600 0%, #f80 100%);
           /* W3C */
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f94600', endColorstr='#ffa84c',GradientType=0 );
-          /* IE6-9 */ }
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorDown', endColorstr='$colorUp',GradientType=0 );
+          /* IE6-9 */
+          cursor: default; }
+      body #container #right_col .tabContent {
+        display: none; }
+        body #container #right_col .tabContent.active {
+          display: block; }
       body #container #right_col ul.wishList {
         display: block; }
         body #container #right_col ul.wishList a {

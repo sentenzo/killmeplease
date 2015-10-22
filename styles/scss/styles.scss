@@ -11,6 +11,8 @@
     $rgbWhiteText: #999;
     
     $rgbColorLight: #F94600;
+    $rgbColorLightfull: $rgbColorLight + #660;
+    $rgbColorLightless: $rgbColorLight - #723;
     $rgbColorDark: #000;
 //
 ////////////
@@ -100,6 +102,8 @@ body {
     padding: 0;
     @include paragrathFont;
     font-size: 10pt;
+    
+    background: url("../../img/bg/bg-dark-ex-0.png");
 }
 h1,h2,h3,h4,h5,h6,p,
 ol,ul,li {
@@ -149,14 +153,14 @@ body {
                 //border-radius: 0 0 10px 10px;
                 padding: 0 10px;
                 color: $rgbBlackText;
-                @include bgGradientVertical($rgbColorLight,#7e2300);
+                @include bgGradientVertical($rgbColorLight,$rgbColorLightless);
                 &:hover {
                     background: none;
                     background-color: $rgbColorLight;
                     cursor: pointer;
                 }
                 &.active {
-                    @include bgGradientVertical(#f80, $rgbColorLight);
+                    @include bgGradientVertical($rgbColorLightfull, $rgbColorLight);
                     cursor: default;
                 }
             }
@@ -168,7 +172,7 @@ body {
             }
             ul.wishList {
                 a {
-                    color: #fff;//#cd0;
+                    color: #fff;
                 }
                 li {
                     display: block;
@@ -176,6 +180,9 @@ body {
                     margin: 4px 0;
                     padding-left: 4px;
                     border-left: 2px solid $rgbColorLight;
+                    &.new {
+                        border-left: 2px solid $rgbColorLightfull;
+                    }
                     tr {
                         td:nth-child(1) {
                             text-align: right;
@@ -216,6 +223,9 @@ body {
                         line-height: normal;
                         font-size: 14px;
                         vertical-align: top;
+                        &:hover {
+                            border: 4px solid $rgbColorLightfull;
+                        }
                     }
                 }
             }

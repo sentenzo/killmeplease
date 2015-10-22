@@ -1,34 +1,51 @@
-var tabs = document.querySelectorAll('.tab');
-var tabContents = document.querySelectorAll('.tabContent');
+(function() {
+  var tabContents, tabs;
 
-window.onload = function () {
-    "use strict";
+  tabs = document.querySelectorAll('.tab');
+
+  tabContents = document.querySelectorAll('.tabContent');
+
+  window.onload = function() {
+    var clickTab, tab, _i, _len, _results;
     tabs = document.querySelectorAll('.tab');
     tabContents = document.querySelectorAll('.tabContent');
-    function clickTab(tab) {
-        var i;
-        for (i = 0; i < tabs.length; i += 1){
-            tabs[i].classList.remove("active");
+    clickTab = function(tab) {
+      var cName, t, tabCL, tabName, tc, tci, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _results;
+      for (_i = 0, _len = tabs.length; _i < _len; _i++) {
+        t = tabs[_i];
+        t.classList.remove("active");
+      }
+      tab.classList.add("active");
+      tabName = "";
+      tabCL = tab.classList;
+      _ref = tab.classList;
+      for (_j = 0, _len1 = _ref.length; _j < _len1; _j++) {
+        cName = _ref[_j];
+        if (cName.match(/tab\d/) !== null) {
+          tabName = cName;
+          break;
         }
-        tab.classList.add("active");
-        var tabName = "";
-        var tabCL = tab.classList;
-        for (i=0; i<tabCL.length; i += 1) {
-            if(tabCL[i].match(/tab\d/) != null) {
-                tabName = tabCL[i];
-                break;
-            }
-        }
-        for (i=0; i<tabContents.length; i += 1) {
-            tabContents[i].classList.remove("active");
-        }
-        var tc = document.querySelectorAll(".tabContent."+tabName);
-        for(i=0; i<tc.length; i++) {
-            tc[i].classList.add("active");
-        }
+      }
+      for (_k = 0, _len2 = tabContents.length; _k < _len2; _k++) {
+        tc = tabContents[_k];
+        tc.classList.remove("active");
+      }
+      tc = document.querySelectorAll(".tabContent." + tabName);
+      _results = [];
+      for (_l = 0, _len3 = tc.length; _l < _len3; _l++) {
+        tci = tc[_l];
+        _results.push(tci.classList.add("active"));
+      }
+      return _results;
+    };
+    _results = [];
+    for (_i = 0, _len = tabs.length; _i < _len; _i++) {
+      tab = tabs[_i];
+      _results.push(tab.onclick = function() {
+        return clickTab(this);
+      });
     }
+    return _results;
+  };
 
-    for (var i = 0; i<tabs.length; i += 1){
-        tabs[i].onclick = function () {clickTab(this);};
-    }
-};
+}).call(this);

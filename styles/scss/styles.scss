@@ -39,6 +39,8 @@
 //
 ////////////
 
+$gBorderRadius: 10px;
+
 @mixin headerFont {
     font-family: 'Black Ops One', sans-serif;
 }
@@ -71,8 +73,8 @@
     margin-right: auto;
 } 
 
-@mixin spanTag($name, $color) {
-    span.#{$name} {
+@mixin spanTag3($name, $color, $class) {
+    span.#{$class} {
         padding: 0 5px;
         border-radius: 0 10px 10px 0;
         
@@ -84,6 +86,9 @@
             content: "#{$name}"; 
         }
     }
+}
+@mixin spanTag($name, $color) {
+    @include spanTag3($name, $color, $name);
 }
 
 @mixin bgGradientVertical($colorUp, $colorDown) {
@@ -149,17 +154,18 @@ body {
 
         
         #right_col  {
+                a {
+                    color: #fff;
+                    cursor: pointer;
+                    //text-decoration: underline;
+                }
             h2 {
                 margin: 0 4px;
                 padding: 6px 0 0 0;
                 @include headerFont;
             }
             ul.wishList {
-                a {
-                    color: #fff;
-                    cursor: pointer;
-                    text-decoration: underline;
-                }
+
                 li {
                     display: block;
                     list-style: none;
@@ -181,6 +187,7 @@ body {
                         @include spanTag("hard", rgb(243, 34, 0));
                         @include spanTag("medium", rgb(255, 174, 8));
                         @include spanTag("easy", #BFF60B);
+                        @include spanTag3("???", #999, "unknown");
                     }
                 }
             }
@@ -206,6 +213,7 @@ body {
                         display: inline-block;
                         text-align: left;
                         border: 4px solid $rgbColorLight;
+                        border-radius: $gBorderRadius;
                         line-height: normal;
                         font-size: 14px;
                         vertical-align: top;
@@ -223,6 +231,8 @@ body {
                 img.map {
                     margin: 10px auto;
                     display: block;
+                    border: 4px solid $rgbColorLight;
+                    border-radius: $gBorderRadius;
                 }
             }
         };
@@ -261,7 +271,7 @@ body {
 // tabs
 .tab {
     display: inline-block;
-    //border-radius: 0 0 10px 10px;
+    border-radius: 0 0 ($gBorderRadius) ($gBorderRadius);
     padding: 0 10px;
     color: $rgbBlackText;
     @include bgGradientVertical($rgbColorLight,$rgbColorLightless);

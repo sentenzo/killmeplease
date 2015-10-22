@@ -4,22 +4,22 @@ tabs = document.querySelectorAll('.tab')
 tabContents = document.querySelectorAll('.tabContent')
 
 tabsInit = () ->
-   tabs = document.querySelectorAll('.tab')
-   tabContents = document.querySelectorAll('.tabContent')
-   clickTab = (tab) ->
-      t.classList.remove("active") for t in tabs
-      tab.classList.add("active")
-      tabName = ""
-      for cName in tab.classList
-         if cName.match(/tab\d/) != null
-            tabName = cName
-            break
-      for tc in tabContents
-         tc.classList.remove("active")
-      tc = document.querySelectorAll(".tabContent."+tabName)
-      tci.classList.add("active") for tci in tc
-   for tab in tabs
-      tab.onclick = () -> clickTab(this)
+    tabs = document.querySelectorAll('.tab')
+    tabContents = document.querySelectorAll('.tabContent')
+    clickTab = (tab) ->
+        t.classList.remove("active") for t in tabs
+        tab.classList.add("active")
+        tabName = ""
+        for cName in tab.classList
+            if cName.match(/tab\d/) != null
+                tabName = cName
+                    break
+    for tc in tabContents
+        tc.classList.remove("active")
+        tc = document.querySelectorAll(".tabContent."+tabName)
+        tci.classList.add("active") for tci in tc
+    for tab in tabs
+        tab.onclick = () -> clickTab(this)
 
 trigs = document.querySelectorAll(".trigger")
 trigged = document.querySelectorAll(".trigged")

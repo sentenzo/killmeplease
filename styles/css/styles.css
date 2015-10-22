@@ -35,14 +35,13 @@ body {
     body #container #left_col {
       float: left;
       width: 0px; }
+    body #container #right_col a {
+      color: #fff;
+      cursor: pointer; }
     body #container #right_col h2 {
       margin: 0 4px;
       padding: 6px 0 0 0;
       font-family: 'Black Ops One', sans-serif; }
-    body #container #right_col ul.wishList a {
-      color: #fff;
-      cursor: pointer;
-      text-decoration: underline; }
     body #container #right_col ul.wishList li {
       display: block;
       list-style: none;
@@ -88,6 +87,14 @@ body {
         background-color: #BFF60B; }
         body #container #right_col ul.wishList li tr span.easy:after {
           content: "easy"; }
+      body #container #right_col ul.wishList li tr span.unknown {
+        padding: 0 5px;
+        border-radius: 0 10px 10px 0;
+        margin: 0 5px;
+        color: #000;
+        background-color: #999; }
+        body #container #right_col ul.wishList li tr span.unknown:after {
+          content: "???"; }
     body #container #right_col .guestList {
       margin: 50px 0 0 0; }
       body #container #right_col .guestList .guestRow {
@@ -109,6 +116,7 @@ body {
           display: inline-block;
           text-align: left;
           border: 4px solid #F94600;
+          border-radius: 10px;
           line-height: normal;
           font-size: 14px;
           vertical-align: top; }
@@ -119,7 +127,9 @@ body {
       margin: 10px 0px; }
     body #container #right_col .destination img.map {
       margin: 10px auto;
-      display: block; }
+      display: block;
+      border: 4px solid #F94600;
+      border-radius: 10px; }
     body #container .buffer {
       clear: both; }
   body .container {
@@ -146,6 +156,7 @@ body {
 
 .tab {
   display: inline-block;
+  border-radius: 0 0 10px 10px;
   padding: 0 10px;
   color: #000;
   background: #822400;

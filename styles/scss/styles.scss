@@ -47,6 +47,9 @@
     //font: 0.8em Arial,Helvetica,sans-serif;
     //font-family: 'Roboto', sans-serif;
 }
+@mixin monoFont {
+    font-family: 'Inconsolata', monospace;
+}
 
 @mixin dbg {
     background-color: rgba(255, 255, 255, 0.05);
@@ -142,37 +145,20 @@ body {
             width: $leftColWIdth;
             //@include dbg;
         };
+        
+
+        
         #right_col  {
             h2 {
-                margin: 0 8px;
+                margin: 0 4px;
                 padding: 6px 0 0 0;
                 @include headerFont;
-            }
-            .tab {
-                display: inline-block;
-                //border-radius: 0 0 10px 10px;
-                padding: 0 10px;
-                color: $rgbBlackText;
-                @include bgGradientVertical($rgbColorLight,$rgbColorLightless);
-                &:hover {
-                    background: none;
-                    background-color: $rgbColorLight;
-                    cursor: pointer;
-                }
-                &.active {
-                    @include bgGradientVertical($rgbColorLightfull, $rgbColorLight);
-                    cursor: default;
-                }
-            }
-            .tabContent {
-                display: none;
-                &.active {
-                    display: block;
-                }
             }
             ul.wishList {
                 a {
                     color: #fff;
+                    cursor: pointer;
+                    text-decoration: underline;
                 }
                 li {
                     display: block;
@@ -229,6 +215,16 @@ body {
                     }
                 }
             }
+            .destination {
+                p {
+                    padding: 0px 10px;
+                    margin: 10px 0px;
+                }
+                img.map {
+                    margin: 10px auto;
+                    display: block;
+                }
+            }
         };
         .buffer {
             clear: both;
@@ -249,6 +245,7 @@ body {
             @include headerFont;
         }
         p.datetime {
+            //@include monoFont;
             text-align: right;
             margin: 0 8px;
             padding: 4px 0;
@@ -260,5 +257,49 @@ body {
     }
 }
 
+
+// tabs
+.tab {
+    display: inline-block;
+    //border-radius: 0 0 10px 10px;
+    padding: 0 10px;
+    color: $rgbBlackText;
+    @include bgGradientVertical($rgbColorLight,$rgbColorLightless);
+    &:hover {
+        background: none;
+        background-color: $rgbColorLight;
+        cursor: pointer;
+    }
+    &.active {
+        @include bgGradientVertical($rgbColorLightfull, $rgbColorLight);
+        cursor: default;
+    }
+}
+.tabContent {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+// triggers
+
+.trigger {
+    &.off {
+        color: $rgbColorLight;
+    }
+    &.on {
+        color: $rgbColorLightfull;
+    }
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
+.trigged {
+    display: none !important;
+    &.active {
+        display: block !important;
+    }
+}
 
 

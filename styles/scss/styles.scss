@@ -1,0 +1,315 @@
+// sass styles/scss/styles.scss styles/css/styles.css
+
+// insparation source:
+// http://www.wix.com/website-template/view/html/837?utm_source=freewebsitetemplates&utm_medium=template_banner&utm_term=design&utm_content=ma_html_fwt_temp_corpdesign&utm_campaign=ma_fwt&experiment_id=ma_html_fwt_temp_corpdesign&viewMode=desktop
+
+////////////
+// colors:
+////////////
+//
+    $rgbBlackText: #000;
+    $rgbWhiteText: #999;
+    
+    $rgbColorLight: #F94600;
+    $rgbColorLightfull: $rgbColorLight + #660;
+    $rgbColorLightless: $rgbColorLight - #723;
+    $rgbColorDark: #000;
+//
+////////////
+
+////////////
+// widths:
+////////////
+//
+    $contentWidthMin: 445px;
+    $contentWidthMax: 600px;
+
+    $leftColWIdth: 0px;
+    //$rightColWidth: $contentWidth - $leftColWIdth;
+//
+////////////
+
+////////////
+// heights:
+////////////
+//
+    $headerHeight: 100px;
+    $footerHeight: 32px;
+    //$wishHeight: 80px;
+//
+////////////
+
+$gBorderRadius: 10px;
+
+@mixin headerFont {
+    font-family: 'Black Ops One', sans-serif;
+}
+@mixin paragrathFont {
+    font-family: 'Rosario', sans-serif;
+    //font: 0.8em Arial,Helvetica,sans-serif;
+    //font-family: 'Roboto', sans-serif;
+}
+@mixin monoFont {
+    font-family: 'Inconsolata', monospace;
+}
+
+@mixin dbg {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+@mixin blockColor($bgColor, $textColor) {
+    background-color: $bgColor;
+    color: $textColor;
+}
+@mixin lightBlock {
+    @include blockColor($rgbColorLight, $rgbBlackText);
+}
+@mixin darkBlock {
+    @include blockColor($rgbColorDark, $rgbWhiteText);
+}
+
+@mixin horCentered {
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+@mixin spanTag3($name, $color, $class) {
+    span.#{$class} {
+        padding: 0 5px;
+        border-radius: 0 10px 10px 0;
+        
+        margin: 0 5px;
+        //font-weight: bold;
+        color: $rgbBlackText;
+        background-color: $color;
+        &:after {
+            content: "#{$name}"; 
+        }
+    }
+}
+@mixin spanTag($name, $color) {
+    @include spanTag3($name, $color, $name);
+}
+
+@mixin bgGradientVertical($colorUp, $colorDown) {
+    background: $colorDown; /* Old browsers */
+    background: -moz-linear-gradient(top,  $colorDown 0%, $colorUp 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$colorDown), color-stop(100%,$colorUp)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $colorDown 0%,$colorUp 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $colorDown 0%,$colorUp 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $colorDown 0%,$colorUp 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $colorDown 0%,$colorUp 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorDown', endColorstr='$colorUp',GradientType=0 ); /* IE6-9 */
+}
+
+
+html, 
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    @include paragrathFont;
+    font-size: 10pt;
+    
+    background: url("../../img/bg/bg-dark-ex-0.png");
+}
+h1,h2,h3,h4,h5,h6,p,
+ol,ul,li {
+    padding: 0;
+    margin: 0;
+}
+body {
+    @include darkBlock;
+    #header {
+        @include lightBlock;
+        width: 100%;
+        position: relative;
+        .container {
+            h1 {
+                text-align: right;
+                margin: 0 8px;
+                cursor: default;
+                @include headerFont;
+            }
+        }
+        //box-shadow: 0px 2px 4px black;
+    }
+    .header {
+        height: $headerHeight;
+    }
+    #container {
+        min-height: 100%;
+        margin-bottom: -$footerHeight;
+        margin-top: -$headerHeight;
+        
+        //@include dbg;
+
+        margin: (-$headerHeight) auto (-$footerHeight) auto;
+        #left_col {
+            float: left;
+            width: $leftColWIdth;
+            //@include dbg;
+        };
+        
+
+        
+        #right_col  {
+                a {
+                    color: #fff;
+                    cursor: pointer;
+                    //text-decoration: underline;
+                }
+            h2 {
+                margin: 0 4px;
+                padding: 6px 0 0 0;
+                @include headerFont;
+            }
+            ul.wishList {
+
+                li {
+                    display: block;
+                    list-style: none;
+                    margin: 4px 0;
+                    padding-left: 4px;
+                    border-left: 2px solid $rgbColorLight;
+                    &.new {
+                        border-left: 2px solid $rgbColorLightfull;
+                    }
+                    tr {
+                        td:nth-child(1) {
+                            text-align: right;
+                            vertical-align: top;
+                        }
+                        p {
+                            padding: 0 5px;
+                        }
+                        @include spanTag("impossible", #FF00CF);
+                        @include spanTag("hard", rgb(243, 34, 0));
+                        @include spanTag("medium", rgb(255, 174, 8));
+                        @include spanTag("easy", #BFF60B);
+                        @include spanTag3("???", #999, "unknown");
+                    }
+                }
+            }
+            .guestList {
+                margin: 50px 0 0 0;
+                .guestRow {
+                    margin: 0px 0px 0px 0px;
+                    padding: 0px;
+                    text-align: justify;
+                    height: 175px;
+                    &:after{
+                        width: 100%;
+                        height: 0px;
+                        visibility: hidden;
+                        overflow: hidden;
+                        content: "";
+                        display: inline-block;
+                    }
+                    .guestBox {
+                        background: #E76D13 none repeat scroll 0% 0%;
+                        width: 100px;
+                        height: 120px;
+                        display: inline-block;
+                        text-align: left;
+                        border: 4px solid $rgbColorLight;
+                        border-radius: $gBorderRadius;
+                        line-height: normal;
+                        font-size: 14px;
+                        vertical-align: top;
+                        &:hover {
+                            border: 4px solid $rgbColorLightfull;
+                        }
+                    }
+                }
+            }
+            .destination {
+                p {
+                    padding: 0px 10px;
+                    margin: 10px 0px;
+                }
+                img.map {
+                    margin: 10px auto;
+                    display: block;
+                    border: 4px solid $rgbColorLight;
+                    border-radius: $gBorderRadius;
+                }
+            }
+        };
+        .buffer {
+            clear: both;
+        }
+    }
+    .container {
+        min-width: $contentWidthMin;
+        max-width: $contentWidthMax;
+        @include horCentered;
+    }
+    #footer {
+        @include lightBlock;
+        width: 100%;
+        h2 {
+            text-align: right;
+            margin: 0 8px;
+            padding: 3px 0;
+            @include headerFont;
+        }
+        p.datetime {
+            //@include monoFont;
+            text-align: right;
+            margin: 0 8px;
+            padding: 4px 0;
+            float: left;
+        }
+    }
+    .footer {
+        height: $footerHeight;
+    }
+}
+
+
+// tabs
+.tab {
+    display: inline-block;
+    border-radius: 0 0 ($gBorderRadius) ($gBorderRadius);
+    padding: 0 10px;
+    color: $rgbBlackText;
+    @include bgGradientVertical($rgbColorLight,$rgbColorLightless);
+    &:hover {
+        background: none;
+        background-color: $rgbColorLight;
+        cursor: pointer;
+    }
+    &.active {
+        @include bgGradientVertical($rgbColorLightfull, $rgbColorLight);
+        cursor: default;
+    }
+}
+.tabContent {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+// triggers
+
+.trigger {
+    &.off {
+        color: $rgbColorLight;
+    }
+    &.on {
+        color: $rgbColorLightfull;
+    }
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
+.trigged {
+    display: none !important;
+    &.active {
+        display: block !important;
+    }
+}
+
+

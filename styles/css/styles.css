@@ -1,0 +1,219 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rosario', sans-serif;
+  font-size: 10pt;
+  background: url("../../img/bg/bg-dark-ex-0.png"); }
+
+h1, h2, h3, h4, h5, h6, p,
+ol, ul, li {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #000;
+  color: #999; }
+  body #header {
+    background-color: #F94600;
+    color: #000;
+    width: 100%;
+    position: relative; }
+    body #header .container h1 {
+      text-align: right;
+      margin: 0 8px;
+      cursor: default;
+      font-family: 'Black Ops One', sans-serif; }
+  body .header {
+    height: 100px; }
+  body #container {
+    min-height: 100%;
+    margin-bottom: -32px;
+    margin-top: -100px;
+    margin: -100px auto -32px auto; }
+    body #container #left_col {
+      float: left;
+      width: 0px; }
+    body #container #right_col a {
+      color: #fff;
+      cursor: pointer; }
+    body #container #right_col h2 {
+      margin: 0 4px;
+      padding: 6px 0 0 0;
+      font-family: 'Black Ops One', sans-serif; }
+    body #container #right_col ul.wishList li {
+      display: block;
+      list-style: none;
+      margin: 4px 0;
+      padding-left: 4px;
+      border-left: 2px solid #F94600; }
+      body #container #right_col ul.wishList li.new {
+        border-left: 2px solid #ffac00; }
+      body #container #right_col ul.wishList li tr td:nth-child(1) {
+        text-align: right;
+        vertical-align: top; }
+      body #container #right_col ul.wishList li tr p {
+        padding: 0 5px; }
+      body #container #right_col ul.wishList li tr span.impossible {
+        padding: 0 5px;
+        border-radius: 0 10px 10px 0;
+        margin: 0 5px;
+        color: #000;
+        background-color: #FF00CF; }
+        body #container #right_col ul.wishList li tr span.impossible:after {
+          content: "impossible"; }
+      body #container #right_col ul.wishList li tr span.hard {
+        padding: 0 5px;
+        border-radius: 0 10px 10px 0;
+        margin: 0 5px;
+        color: #000;
+        background-color: #f32200; }
+        body #container #right_col ul.wishList li tr span.hard:after {
+          content: "hard"; }
+      body #container #right_col ul.wishList li tr span.medium {
+        padding: 0 5px;
+        border-radius: 0 10px 10px 0;
+        margin: 0 5px;
+        color: #000;
+        background-color: #ffae08; }
+        body #container #right_col ul.wishList li tr span.medium:after {
+          content: "medium"; }
+      body #container #right_col ul.wishList li tr span.easy {
+        padding: 0 5px;
+        border-radius: 0 10px 10px 0;
+        margin: 0 5px;
+        color: #000;
+        background-color: #BFF60B; }
+        body #container #right_col ul.wishList li tr span.easy:after {
+          content: "easy"; }
+      body #container #right_col ul.wishList li tr span.unknown {
+        padding: 0 5px;
+        border-radius: 0 10px 10px 0;
+        margin: 0 5px;
+        color: #000;
+        background-color: #999; }
+        body #container #right_col ul.wishList li tr span.unknown:after {
+          content: "???"; }
+    body #container #right_col .guestList {
+      margin: 50px 0 0 0; }
+      body #container #right_col .guestList .guestRow {
+        margin: 0px 0px 0px 0px;
+        padding: 0px;
+        text-align: justify;
+        height: 175px; }
+        body #container #right_col .guestList .guestRow:after {
+          width: 100%;
+          height: 0px;
+          visibility: hidden;
+          overflow: hidden;
+          content: "";
+          display: inline-block; }
+        body #container #right_col .guestList .guestRow .guestBox {
+          background: #E76D13 none repeat scroll 0% 0%;
+          width: 100px;
+          height: 120px;
+          display: inline-block;
+          text-align: left;
+          border: 4px solid #F94600;
+          border-radius: 10px;
+          line-height: normal;
+          font-size: 14px;
+          vertical-align: top; }
+          body #container #right_col .guestList .guestRow .guestBox:hover {
+            border: 4px solid #ffac00; }
+    body #container #right_col .destination p {
+      padding: 0px 10px;
+      margin: 10px 0px; }
+    body #container #right_col .destination img.map {
+      margin: 10px auto;
+      display: block;
+      border: 4px solid #F94600;
+      border-radius: 10px; }
+    body #container .buffer {
+      clear: both; }
+  body .container {
+    min-width: 445px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; }
+  body #footer {
+    background-color: #F94600;
+    color: #000;
+    width: 100%; }
+    body #footer h2 {
+      text-align: right;
+      margin: 0 8px;
+      padding: 3px 0;
+      font-family: 'Black Ops One', sans-serif; }
+    body #footer p.datetime {
+      text-align: right;
+      margin: 0 8px;
+      padding: 4px 0;
+      float: left; }
+  body .footer {
+    height: 32px; }
+
+.tab {
+  display: inline-block;
+  border-radius: 0 0 10px 10px;
+  padding: 0 10px;
+  color: #000;
+  background: #822400;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #822400 0%, #F94600 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #822400), color-stop(100%, #F94600));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #822400 0%, #F94600 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #822400 0%, #F94600 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #822400 0%, #F94600 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #822400 0%, #F94600 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorDown', endColorstr='$colorUp',GradientType=0 );
+  /* IE6-9 */ }
+  .tab:hover {
+    background: none;
+    background-color: #F94600;
+    cursor: pointer; }
+  .tab.active {
+    background: #F94600;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #F94600 0%, #ffac00 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F94600), color-stop(100%, #ffac00));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #F94600 0%, #ffac00 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #F94600 0%, #ffac00 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #F94600 0%, #ffac00 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #F94600 0%, #ffac00 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorDown', endColorstr='$colorUp',GradientType=0 );
+    /* IE6-9 */
+    cursor: default; }
+
+.tabContent {
+  display: none; }
+  .tabContent.active {
+    display: block; }
+
+.trigger {
+  cursor: pointer;
+  text-decoration: underline; }
+  .trigger.off {
+    color: #F94600; }
+  .trigger.on {
+    color: #ffac00; }
+
+.trigged {
+  display: none !important; }
+  .trigged.active {
+    display: block !important; }
+
+/*# sourceMappingURL=styles.css.map */

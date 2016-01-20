@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.p {
+    height: 150%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.p1 {
+    background-image: url("img/p1.jpg");
+}
+.p2 {
+    background-image: url("img/p2.jpg");
+}
+.p3 {
+    background-image: url("img/p3.jpg");
+}
+.p4 {
+    background-image: url("img/p4.jpg");
+}
+.p5 {
+    background-image: url("img/p5.jpg");
+}
+

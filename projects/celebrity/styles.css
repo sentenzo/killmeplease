@@ -30,6 +30,18 @@ body {
 .p5 {
     background-image: url("img/p5.jpg");
 }
+.p6 {
+    background-image: url("img/p6.jpg");
+}
+.p7 {
+    background-image: url("img/p7.jpg");
+}
+.p8 {
+    background-image: url("img/p8.jpg");
+}
+.p9 {
+    background-image: url("img/p9.jpg");
+}
 
 .shadow {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0));

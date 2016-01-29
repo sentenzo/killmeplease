@@ -1,0 +1,101 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.p {
+    height: 150%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.p0 {
+    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+}
+.p1 {
+    background-image: url("img/01_comics_title/comics_title01.jpg");
+}
+.p2 {
+    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+}
+.p3 {
+    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+}
+.p4 {
+    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+}
+.p5 {
+    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+}
+.p6 {
+    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+}
+.p7 {
+    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+}
+.p8 {
+    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+}
+.p8_0 {
+    background-image: url("img/02_manhattan/nuclear_blast_02.jpg");
+}
+.p9 {
+    background-image: url("img/03_nobel_prize/nobel_prize_01.jpg");
+}
+.p10 {
+    background-image: url("img/03_nobel_prize/nobel_prize_02.png");
+}
+.p11 {
+    background-image: url("img/03_nobel_prize/nobel_prize_03.jpg");
+}
+.p12 {
+    background-image: url("img/04_bongo/bongo_01.jpg");
+}
+.p13 {
+    background-image: url("img/04_bongo/bongo_02.jpg");
+}
+.p14 {
+    background-image: url("img/05_art/art_view_0.png");
+}
+.p15 {
+    background-image: url("img/05_art/art_view_1.png");
+}
+.p16 {
+    background-image: url("img/05_art/art_0.jpg");
+}
+.p17 {
+    background-image: url("img/05_art/art_1.jpg");
+}
+.p18 {
+    background-image: url("img/05_art/gogo_0.jpg");
+}
+.p19 {
+    background-image: url("img/06_art_about/art_about_0.jpg");
+}
+.p20 {
+    background-image: url("img/06_art_about/book.jpg");
+}
+.p21 {
+    background-image: url("img/07_the_end/the_end_0.jpg");
+}
+
+.shadow {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0));
+    height: 10px;
+    width: 100%;
+}
+
+.light {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(0255, 255, 255, 0.0));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}

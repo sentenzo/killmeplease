@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: auto;
+  background-color: black;
 }
 
 .p {
@@ -109,6 +110,11 @@ body {
     background-image: url("img/05_now_days/03_ssss/4_join_now.jpg");
 }
 
+img {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+}
 .shadow {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0));
     height: 10px;

@@ -22,67 +22,91 @@ body {
     background-image: url("img/01_comics_title/comics_title01.jpg");
 }
 .p2 {
-    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+    background-image: url("img/02_two_kinds/two_kinds.jpg");
 }
 .p3 {
-    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+    background-image: url("img/03_history/03_history00.jpg");
 }
 .p4 {
-    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+    background-image: url("img/03_history/03_history_01.png");
 }
 .p5 {
-    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+    background-image: url("img/03_history/03_history02.jpg");
 }
 .p6 {
-    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+    background-image: url("img/03_history/03_history03.jpg");
 }
 .p7 {
-    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+    background-image: url("img/04_golden_age/Action_Comics.jpg");
 }
 .p8 {
-    background-image: url("img/00_pleace_stand_by/pleace_stand_by0.jpg");
+    background-image: url("img/04_golden_age/Superman.jpg");
 }
 .p8_0 {
-    background-image: url("img/02_manhattan/nuclear_blast_02.jpg");
+    background-image: url("img/04_golden_age/reflaction.jpg");
 }
+
+
 .p9 {
-    background-image: url("img/03_nobel_prize/nobel_prize_01.jpg");
+    background-image: url("img/05_now_days/title.jpg");
 }
 .p10 {
-    background-image: url("img/03_nobel_prize/nobel_prize_02.png");
+    background-image: url("img/05_now_days/web_0.jpg");
 }
 .p11 {
-    background-image: url("img/03_nobel_prize/nobel_prize_03.jpg");
+    background-image: url("img/05_now_days/web_simple_1.jpg");
 }
+
 .p12 {
-    background-image: url("img/04_bongo/bongo_01.jpg");
+    background-image: url("img/05_now_days/01_transmetropolitan/0_title.jpg");
 }
 .p13 {
-    background-image: url("img/04_bongo/bongo_02.jpg");
+    background-image: url("img/05_now_days/01_transmetropolitan/1_fear_and_loathing_las_vegas_johnny_depp_hd-wallpaper-331178.jpg");
 }
 .p14 {
-    background-image: url("img/05_art/art_view_0.png");
+    background-image: url("img/05_now_days/01_transmetropolitan/2_fear_hatred_vegas_stuff_ultra_3840x2160_hd-wallpaper-237262.jpg");
 }
 .p15 {
-    background-image: url("img/05_art/art_view_1.png");
+    background-image: url("img/05_now_days/01_transmetropolitan/3_brodude.ru_4.09.2014_GwEcSglw8WRMD.jpg");
 }
 .p16 {
-    background-image: url("img/05_art/art_0.jpg");
+    background-image: url("img/05_now_days/01_transmetropolitan/4_p3_63.jpg");
 }
 .p17 {
-    background-image: url("img/05_art/art_1.jpg");
+    background-image: url("img/05_now_days/01_transmetropolitan/A.jpg");
 }
+
+
 .p18 {
-    background-image: url("img/05_art/gogo_0.jpg");
+    background-image: url("img/05_now_days/02_blacksad/0_guarnido-.-affiche-blacksad-new-york-70x100_YCQlZD.jpg");
 }
 .p19 {
-    background-image: url("img/06_art_about/art_about_0.jpg");
+    background-image: url("img/05_now_days/02_blacksad/1_blacksad1-page5-case2.jpg");
 }
 .p20 {
-    background-image: url("img/06_art_about/book.jpg");
+    background-image: url("img/05_now_days/02_blacksad/2_blacksad-guarnido-art-print-john-s-blues_105469.jpeg");
 }
 .p21 {
-    background-image: url("img/07_the_end/the_end_0.jpg");
+    background-image: url("img/05_now_days/02_blacksad/3_BLACKSAD_02_IZ_24139-2cadrage.jpg");
+}
+.p22 {
+    background-image: url("img/05_now_days/02_blacksad/4_blacksad.JPG");
+}
+
+.p23 {
+    background-image: url("img/05_now_days/03_ssss/0_title.jpg");
+}
+.p24 {
+    background-image: url("img/05_now_days/03_ssss/1_norway.jpg");
+}
+.p25 {
+    background-image: url("img/05_now_days/03_ssss/2_pages.jpg");
+}
+.p26 {
+    background-image: url("img/05_now_days/03_ssss/3_example.jpg");
+}
+.p27 {
+    background-image: url("img/05_now_days/03_ssss/4_join_now.jpg");
 }
 
 .shadow {

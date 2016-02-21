@@ -1,0 +1,78 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  background-color: black;
+}
+
+.p {
+    height: 150%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.p0 {
+    background-image: url("img/00_title/00_title_gen.jpg");
+}
+.p1 {
+    background-image: url("img/00_title/01_title_gen.jpg");
+}
+.p2 {
+    background-image: url("img/01_geny_of_space/02_0_genetics.jpg");
+}
+.p3 {
+    background-image: url("img/01_geny_of_space/02_1_tit.jpg");
+}
+.p4 {
+    background-image: url("img/02_gattaca_world/02_Gattaca-posters.jpg");
+}
+.p5 {
+    background-image: url("img/02_gattaca_world/02_high_soc.png");
+}
+.p6 {
+    background-image: url("img/02_gattaca_world/02_low_soc.jpg");
+}
+.p7 {
+    background-image: url("img/03_hero/04_0_hero.png");
+}
+.p8 {
+    background-image: url("img/03_hero/04_0_hero.jpg");
+}
+.p9 {
+    background-image: url("img/03_hero/04_1_hero.jpg");
+}
+.p10 {
+    background-image: url("img/03_hero/04_1_gattaca.jpg");
+}
+
+.p11 {
+    background-image: url("img/03_hero/04_01_party.jpg");
+}
+.p12 {
+    background-image: url("img/the_end.jpg");
+}
+
+img {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+.shadow {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.0));
+    height: 10px;
+    width: 100%;
+}
+
+.light {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(0255, 255, 255, 0.0));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+}

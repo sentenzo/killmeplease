@@ -1,39 +1,103 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>Kill me please</title>
-    <link rel="shortcut icon" type="image/ico" href="favicon.ico?v=2" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Описание для чего предназначен этот сайт">
+    <meta name="keywords" content="ключевое слово №1, ключевое слово №2, ключевое слово №3">
+    <title>Название сайта - Главная страница</title>
+    
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <style>
-        body {
-          line-height: 1;
-        }
-        p {margin: 0;}
-        html, body {
-          height: 100%;
-          margin: 0;
-        }
-        body {
-          position: relative;
-        }
-        div {
-          position: absolute;
-          top: 50%;
-          left:50%;
-          transform: translateY(-50%);
-          transform: translateX(-50%);
+   <header class="header">
+    <nav class="index.md">
+        <a href="/">Главная</a>
         
-        }
-    </style>
-    <div>
-        <p><a href="projects/circus/index.html">circus</a></p>
-        <p><a href="projects/celebrity/index.html">celebrity</a></p>
-        <p><a href="projects/comics/index.html">comics</a></p>
-        <p><a href="projects/gattaca/index.html">gattaca</a></p>
+        <a href="/page/p1/">Информация</a>
+        
+        <a href="/page/p2/">Контакты</a>
+        
+        <a href="/page/p3/">Как добраться</a>
+        
+    </nav>
+    <p style="float:right;">
+        Главное меню. Можно сюда ещё телефон вывести.
+    </p>
+</header>
+   <div class="wrapper">
+      <div class="header-bufer"></div>
+       <div class="poster">
+    <div class="text">
+        <h1>Заголовок</h1>
+        <p>Ещё текст какой-то....</p> 
+        <p>На самом деле тут может быть достаточно много текста</p>
     </div>
+</div>
+       
+       <div class="attention"  >
+             <h1 id="внимание">ВНИМАНИЕ!!!</h1>
+<h2 id="очень-важное-сообщение-срочные-новости">Очень важное сообщение! Срочные новости!</h2>
+<p>(будет показываться опционально)</p>
+
+       </div>
+       
+       <div class="blocks">
+    
+    <a href="/page/p0/">
+        <div class="block p0">
+            <h1>Страница 4</h1>
+        </div>
+    </a>
+    
+    <a href="/page/p1/">
+        <div class="block p1">
+            <h1>Страница 5</h1>
+        </div>
+    </a>
+    
+    <a href="/page/p2/">
+        <div class="block p2">
+            <h1>Бла-бла-бла</h1>
+        </div>
+    </a>
+    
+    <a href="/page/p3/">
+        <div class="block p3">
+            <h1>Юмор о нотариате</h1>
+        </div>
+    </a>
+    
+</div>
+       <div class="map">
+    <div class="text">
+        <p>
+            <strong>Адрес:</strong>
+                 Республика Коми, гор. Сосногорск,
+                  ул. Сосновский переулок, 8
+        </p>
+        <p>
+            <strong>Телефон:</strong>
+            (82149) 5-42-55
+        </p>
+        <p>
+            <strong>E-mail:</strong>
+            <a href="mailto:notarius.timushev59@gmail.com">notarius.timushev59@gmail.com</a>
+        </p>
+    </div>
+</div>
+       <div class="footer-bufer"></div>
+   </div>
+   <footer class="footer">
+<h3>"Подвал" главной страницы</h3>
+    <p>Какая-то редко востребованная информация.</p>
+    <p>Возможно, опять контактные данные. Копирайт...</p>
+
+</footer>
 
 </body>
+
+</html>

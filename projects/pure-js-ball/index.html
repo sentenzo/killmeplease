@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gamedev Canvas Workshop</title>
+    <style>
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="480" height="320"></canvas>
+
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+
+    let ww = 12;
+    let rr = 10;
+    let ball = {x: {pos: ww + rr, d: 0}, y: {pos: ww + rr, d: 0}, r: rr, color: "#0095DD"};
+    let court = {x: {min: ww, max: canvas.width - ww}, y: {min: ww, max: canvas.height - ww}};
+
+    function drawBounds() {
+        var c = "#0a6525";
+        ctx.beginPath();
+        ctx.rect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = c;
+        ctx.fill();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.rect(ww, ww, court.x.max - 4*ww, court.y.max - 4*ww);
+        ctx.fillStyle = "#eee";
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    function drawBall(b) {
+        ctx.beginPath();
+        ctx.arc(b.x.pos, b.y.pos, b.r, 0, Math.PI*2);
+        ctx.fillStyle = b.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+    function updateBall(b) {
+        b.x = updateCoor(b.x, court.x, b.r);
+        b.y = updateCoor(b.y, court.y, b.r);
+    }
+    function updateCoor(coor, bounds, r) {
+        coor.pos += coor.d;
+        coor.d /= 1.005;
+        if (coor.pos < bounds.min + r) {
+            coor.pos = bounds.min + r;
+        } else if (coor.pos > bounds.max - r) {
+            coor.pos = bounds.max - r;
+        } else {
+            return coor;
+        }
+        coor.d *= -0.7;
+        return coor;
+    }
+    function draw() {
+        ctx.clearRect(court.x.min, court.y.min, court.x.max - ww, court.y.max - ww);
+        drawBall(ball);
+        updateBall(ball);
+        requestAnimationFrame(draw);
+    }
+    canvas.onmouseup = function (e) {
+        let mx = e.clientX - canvas.getBoundingClientRect().x;
+        let my = e.clientY - canvas.getBoundingClientRect().y;
+        ball.x.d = -(mx - ball.x.pos)/8;
+        ball.y.d = -(my - ball.y.pos)/8;
+    }
+    drawBounds();
+    draw();
+</script>
+
+</body>
+</html>

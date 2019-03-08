@@ -31,6 +31,8 @@
 
     var game = new Phaser.Game(config);
     var isSmallScreen = Math.min(window.innerWidth, window.innerHeight) < 460;
+    var rx = window.innerWidth/4;
+    var ry = window.innerHeight/4;
 
     var resource = {
         background: "img/background/0.jpg",
@@ -70,7 +72,10 @@
         scene.sound.pauseOnBlur = false; // при потере фокуса на окне музыка продолжает играть
 
         var a_track = scene.sound.add("a_track", {loop: true, volume: 0.5});
-        scene.add.image(config.width/2, config.height/2, 'background');
+        var bg = scene.add.image(config.width/2, config.height/2, 'background');
+        // if (isSmallScreen) {
+        //     bg.setScale(0.4, 0.4);
+        // }
 
         var circle = new Phaser.Geom.Circle(config.width/2, config.height/2, isSmallScreen ? 172 : 228);
         var graphics = this.add.graphics({ fillStyle: { color: 0x000000, alpha: 0.6 } });
@@ -88,9 +93,8 @@
         var shardsLeft = resource.shards.length;
 
         resource.shards.forEach(function(x, i) {
-            var d  = 160;
-            var dx = Phaser.Math.Between(-d, d);
-            var dy = Phaser.Math.Between(-d*0.7, d*0.7);
+            var dx = Phaser.Math.Between(-rx, rx);
+            var dy = Phaser.Math.Between(-ry, ry);
             var sh = shards.create(config.width/2 + dx, config.height/2 + dy, 'sh' + i);
             sh.tint = 0xaaaaaa;
             sh.setInteractive(scene.input.makePixelPerfect())
@@ -112,6 +116,11 @@
                     scene.children.bringToTop(sh);
                     if (sh.completed) {
                         sh.completed = false;
+                        if (! sh.input.draggable) {
+                            scene.input.setDraggable(sh);
+                            sh.x += Phaser.Math.Between(-20, 20);
+                            sh.y += Phaser.Math.Between(-20, 20);
+                        }
                         //scene.input.setDraggable(sh);
                         //scene.sound.pause("a_track");
                         a_track.pause();

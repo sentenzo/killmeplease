@@ -71,7 +71,7 @@
         var firstVictory = true;
         scene.sound.pauseOnBlur = false; // при потере фокуса на окне музыка продолжает играть
 
-        var a_track = scene.sound.add("a_track", {loop: true, volume: 1.0});
+        var a_track = scene.sound.add("a_track", {loop: true, volume: 2.0});
         var bg = scene.add.image(config.width/2, config.height/2, 'background');
         // if (isSmallScreen) {
         //     bg.setScale(0.4, 0.4);

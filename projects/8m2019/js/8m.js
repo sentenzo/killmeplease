@@ -3,6 +3,23 @@
         type: Phaser.AUTO,
         width: window.innerWidth,
         height: window.innerHeight,
+        scale: {
+            parent: 'phaser-example',
+            width: window.innerWidth,
+            height: window.innerHeight,
+            mode: Phaser.Scale.RESIZE,//.FIT,
+            zoom: -10,
+            //resolution: 1,
+            autoCenter: Phaser.Scale.CENTER_BOTH,
+            // min: {
+            //     width: 1500,
+            //     height: 1500
+            // },
+            // max: {
+            //     width: 1800,
+            //     height: 1800
+            // }
+        },
         scene: {
             preload: preload,
             create: create,
@@ -13,6 +30,7 @@
     var shards;
 
     var game = new Phaser.Game(config);
+    var isSmallScreen = Math.min(window.innerWidth, window.innerHeight) < 460;
 
     var resource = {
         background: "img/background/0.jpg",
@@ -29,7 +47,11 @@
         var scene = this;
         scene.load.image('background', resource.background);
         resource.shards.forEach(function(x, i) {
-            scene.load.image("sh" + i, x);
+            if (isSmallScreen) {
+                scene.load.image("sh" + i, x + ".png");
+            } else {
+                scene.load.image("sh" + i, x);
+            }
         });
 
         //scene.load.audio('a_shard_up', 'audio/noise/');
@@ -50,7 +72,7 @@
         var a_track = scene.sound.add("a_track", {loop: true, volume: 0.5});
         scene.add.image(config.width/2, config.height/2, 'background');
 
-        var circle = new Phaser.Geom.Circle(config.width/2, config.height/2, 228);
+        var circle = new Phaser.Geom.Circle(config.width/2, config.height/2, isSmallScreen ? 172 : 228);
         var graphics = this.add.graphics({ fillStyle: { color: 0x000000, alpha: 0.6 } });
         graphics.fillCircleShape(circle);
         //scene.add.image(config.width/2, config.height/2, 'bay');
@@ -69,7 +91,7 @@
             var d  = 160;
             var dx = Phaser.Math.Between(-d, d);
             var dy = Phaser.Math.Between(-d*0.7, d*0.7);
-            var sh = shards.create(config.width/2 + dx, config.height/2 + dy, 'sh' + i)
+            var sh = shards.create(config.width/2 + dx, config.height/2 + dy, 'sh' + i);
             sh.tint = 0xaaaaaa;
             sh.setInteractive(scene.input.makePixelPerfect())
                 .on('pointerover', function (pointer, gameObject, dragX, dragY) {
@@ -90,7 +112,7 @@
                     scene.children.bringToTop(sh);
                     if (sh.completed) {
                         sh.completed = false;
-                        
+                        //scene.input.setDraggable(sh);
                         //scene.sound.pause("a_track");
                         a_track.pause();
                         //if (shardsLeft == 0) {
